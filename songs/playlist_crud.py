@@ -11,7 +11,7 @@ class PlaylistCrud:
     def add_playlist(self, playlist_name):
         try:
             # Creating a new Playlists object
-            playlist_to_add = Playlists(name=playlist_name, use_id=self.user_id)
+            playlist_to_add = Playlists(name=playlist_name, user_id=self.user_id)
             # Adding new playlist to the session and committing
             session.add(playlist_to_add)
             session.commit()
